@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <!-- Link Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Link File CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/checkout.css">
+    <!-- <link rel="stylesheet" href="/css/caroucel-marcas.css"> -->
+    <!-- <link rel="stylesheet" href="/css/slide.css"> -->
+    <!-- <link rel="stylesheet" href="/css/bannerbig.css"> -->
+</head>
+
+<body>
+    <header>
+
+        <div class="container top-nav">
+            <a href="index.html" class="logo"><img src="/img/electro.png" alt="" ></a>
+            <form action="" class="search">
+                <input type="search" placeholder="buscar..." name="" id="">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+
+            <div class="cart_header">
+                <div onclick="open_cart()" class="icon_cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="count_item">0</span>
+                </div>
+                <div class="tottal_price">
+                    <p>Mi Carrito:</p>
+                    <p class="price_cart_head">S/0</p>
+                </div>
+            </div>
+        </div>
+
+        <nav>
+            <div class="link container">
+                <i onclick="open_menu()" class="fa-solid fa-bars btn_open_menu"></i>
+                <ul id="menu">
+                    <!-- esto de aqui se activa en el responsive -->
+                    <span onclick="close_menu()" class="bg-overlay"></span>
+                    <i onclick="close_menu()" class="fa-solid fa-rectangle-xmark btn_close_menu"></i>
+                    <!-- <a href=""></a> -->
+                    <img class="logo_menu" src="/img/electro.jpeg" alt="">
+
+                    <li class="active"><a href="/index.html">home</a></li>
+                    <li><a href="/html/all_products.html">catalogo</a></li>
+                    <li><a href="">nosotros</a></li>
+                    <li><a href="">contactanos</a></li>
+                </ul>
+                <div class="login_signup">
+                    <a href="/html/login.html">login <i class="fa-solid fa-right-to-bracket"></i></a>
+                    <a href="#">registrar <i class="fa-solid fa-user-plus"></i></a>
+
+                </div>
+            </div>
+        </nav>
+
+
+    </header>
+
+
+    <div class="cart">
+        <div class="top_cart">
+            <h3>Mi Carrito <span class="count_item_cart">(0item in cart)</span></h3>
+            <span onclick="close_cart()" class="close_cart"><i class="fa-solid fa-xmark"></i></span>
+        </div>
+
+        <div class="items_in_cart">
+
+            <!-- <div class="item_cart">
+                <img src="/img/c_analogicas/01a.png" alt="">
+                <div class="content">
+                    <h4>Lorem ipsum ggggggggggggggggggggg dolor sit</h4>
+                    <p class="price_cart">$140</p>
+                </div>
+                <button class="delete_item"><i class="fa-solid fa-trash"></i></button>
+            </div> -->
+
+        </div>
+
+
+        <div class="bottom_cart">
+            <div class="total">
+                <p>subtotal</p>
+                <p class="price_cart_total">S/0</p>
+            </div>
+
+            <div class="button_cart">
+                <a href="#" class="btn_cart">continuar compra</a>
+                <button class="btn_cart trans_bg">seguir comprando</button>
+            </div>
+        </div>
+    </div>
+    <section class="checkout">
+        <div class="container">
+            <form action="">
+                <div class="address">
+                    <h2>Delivery</h2>
+                    <div class="inputs">
+                        <label for="">Nombre</label>
+                        <input type="text" name="" id="" placeholder="Ingresa tu Nombre">
+
+                        <label for="">Email</label>
+                        <input type="email" name="" id="" placeholder="Ingresa tu email">
+
+                        <label for="">Telefono</label>
+                        <input type="number" name="" id="" placeholder="Ingresa tu telefono">
+                    </div>
+                    <div class="cupon">
+                        <h2>Digita el codigo</h2>
+                        <div class="inputs">
+                            <label for="">codigo</label>
+                            <input type="text" name="" id="">
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <div class="ordersummary">
+                <h1>Resumen de Pedido</h1>
+                <div class="items">
+                    <div class="item_cart">
+                        <img src="/img/c_ip/02ip.png" alt="">
+    
+                        <div class="content">
+                            <h4>CAM IP INT 1080P WIFI 2.4GHZ. LENTE FIJO 2.8MM</h4>
+                            <p class="price_cart">Precio : <span>S/175</span></p>
+                        </div>
+                    </div>
+                    <div class="item_cart">
+                        <img src="/img/c_ip/03ip.png" alt="">
+    
+                        <div class="content">
+                            <h4>CAM IP INT 1080P WIFI 2.4GHZ. LENTE FIJO 2.8MM</h4>
+                            <p class="price_cart">Precio : <span>S/175</span></p>
+                        </div>
+                    </div>
+    
+                    <div class="total">
+                        <p>total</p>
+                        <span>S/180</span>
+                    </div>
+                    <div class="button_div">
+                        <button>Comprar</button>
+                    </div>
+                </div>
+                
+
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container">
+            <div class="big_row">
+                <img src="" alt="">
+                <div class="hotline">
+                    <i class="fa-solid fa-headset"></i>
+                    <div class="text">
+                        <h5>comucate con nosotros:</h5>
+                        <h6>99999999999</h6>
+                    </div>
+                </div>
+                <!-- <i class="fa-solid fa-location-dot"></i> -->
+                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+            </div>
+
+            <div class="row">
+                <h4>sobre nosotros</h4>
+                <div class="link">
+                    <a href="#">Quienes somos</a>
+                    <a href="#">tutoriales</a>
+                    <a href="#">atencion</a>
+
+                </div>
+            </div>
+            <div class="row">
+                <h4>sobre nosotros</h4>
+                <div class="link">
+                    <a href="#">Quienes somos</a>
+                    <a href="#">tutoriales</a>
+                    <a href="#">atencion</a>
+
+                </div>
+            </div>
+            <div class="row">
+                <h4>sobre nosotros</h4>
+                <div class="link">
+                    <a href="#">Quienes somos</a>
+                    <a href="#">tutoriales</a>
+                    <a href="#">atencion</a>
+
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="bottom_footer">
+            <div class="container cnt_copy">
+                <p>Copyright &copy; <span>ELECTROTOP</span> derechos reservados</p>
+                <div class="payment_img">
+                    <!-- <img src="/img/slider/visa.png" alt="">
+                    <img src="/img/slider/mastercard.png" alt="">
+                    <img src="/img/slider/dinnersclub.png" alt="">
+                    <img src="/img/slider/amercican-express.png" alt=""> -->
+                    <img src="/img/slider/logos-pasarela.png" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+    <script src="/js/main.js"></script>
+</html>

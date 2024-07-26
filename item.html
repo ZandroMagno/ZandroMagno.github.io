@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+    <!-- Link Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Link File CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/item-detalle.css">
+    <!-- <link rel="stylesheet" href="/css/caroucel-marcas.css"> -->
+    <!-- <link rel="stylesheet" href="/css/slide.css"> -->
+    <!-- <link rel="stylesheet" href="/css/bannerbig.css"> -->
+</head>
+
+<body>
+    <header>
+
+        <div class="container top-nav">
+            <a href="index.html" class="logo"><img src="/img/electro.png" alt=""></a>
+            <form action="" class="search">
+                <input type="search" placeholder="buscar..." name="" id="">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+
+            <div class="cart_header">
+                <div onclick="open_cart()" class="icon_cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="count_item">0</span>
+                </div>
+                <div class="tottal_price">
+                    <p>Mi Carrito:</p>
+                    <p class="price_cart_head">S/0</p>
+                </div>
+            </div>
+        </div>
+
+        <nav>
+            <div class="link container">
+                <i onclick="open_menu()" class="fa-solid fa-bars btn_open_menu"></i>
+                <ul id="menu">
+                    <!-- esto de aqui se activa en el responsive -->
+                    <span onclick="close_menu()" class="bg-overlay"></span>
+                    <i onclick="close_menu()" class="fa-solid fa-rectangle-xmark btn_close_menu"></i>
+                    <!-- <a href=""></a> -->
+                    <img class="logo_menu" src="/img/electro.jpeg" alt="">
+
+                    <li class="active"><a href="/index.html">home</a></li>
+                    <li><a href="/all_products.html" onclick="clearSearchTerm()">catalogo</a></li>
+
+                    <script>
+                        function clearSearchTerm() {
+                            localStorage.removeItem('searchTerm');
+                        }
+                    </script>
+
+                    <li><a href="">nosotros</a></li>
+                    <li><a href="">contactanos</a></li>
+                </ul>
+                <div class="login_signup">
+                    <a href="/login.html">login <i class="fa-solid fa-right-to-bracket"></i></a>
+                    <a href="#">registrar <i class="fa-solid fa-user-plus"></i></a>
+
+                </div>
+            </div>
+        </nav>
+
+
+    </header>
+
+
+    <div class="cart">
+        <div class="top_cart">
+            <h3>Mi Carrito <span class="count_item_cart">(0item in cart)</span></h3>
+            <span onclick="close_cart()" class="close_cart"><i class="fa-solid fa-xmark"></i></span>
+        </div>
+
+        <div class="items_in_cart">
+
+            <!-- <div class="item_cart">
+                <img src="/img/c_analogicas/01a.png" alt="">
+                <div class="content">
+                    <h4>Lorem ipsum ggggggggggggggggggggg dolor sit</h4>
+                    <p class="price_cart">$140</p>
+                </div>
+                <button class="delete_item"><i class="fa-solid fa-trash"></i></button>
+            </div> -->
+
+        </div>
+
+
+        <div class="bottom_cart">
+            <div class="total">
+                <p>subtotal</p>
+                <p class="price_cart_total">S/0</p>
+            </div>
+
+            <div class="button_cart">
+                <a href="/checkout.html" class="btn_cart">continuar compra</a>
+                <button class="btn_cart trans_bg">seguir comprando</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="item_detail">
+        <div class="container">
+            <div class="img_item">
+                <div class="big_img">
+                    <img id="bigImg" src="" alt="">
+                </div>
+                <div class="sm_imgs" id="smImgs">
+                </div>
+            </div>
+            <div class="details_item">
+                <h1 class="name" id="productName"></h1>
+                <div class="stars" id="productStars">
+                </div>
+                <div class="price">
+                    <p><span id="productPrice"></span></p>
+                    <p class="old_price" id="productOldPrice"></p>
+                </div>
+                <h5>SKU:<span id="productSKU"></span></h5>
+                <p class="text_p" id="productDescription"></p>
+                <button>Add to cart <i class="fa-solid fa-cart-shopping"></i></button>
+                <div class="icons">
+                    <span><i class="fa-regular fa-heart"></i></span>
+                    <span><i class="fa-brands fa-whatsapp"></i></span>
+                    <span><i class="fa-brands fa-facebook"></i></span>
+                    <span><i class="fa-brands fa-tiktok"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="slide slide_sale">
+        <div class="container">
+            <div class="sale_sec mySwiper">
+                <div class="top_slide">
+                    <h2>Productos <span> en oferta</span></h2>
+                </div>
+                <div id="swiper_items_sale" class="products swiper-wrapper">
+                </div>
+                <div class="swiper-button-next btn_Swip"></div>
+                <div class="swiper-button-prev btn_Swip"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="back_to_top">
+        <p>Electrotop(Inicio)</p>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="big_row">
+                <img src="" alt="">
+                <div class="hotline">
+                    <i class="fa-solid fa-headset"></i>
+                    <div class="text">
+                        <h5>comucate con nosotros:</h5>
+                        <h6>99999999999</h6>
+                    </div>
+                </div>
+                <!-- <i class="fa-solid fa-location-dot"></i> -->
+                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+            </div>
+
+            <div class="row">
+                <h4>sobre nosotros</h4>
+                <div class="link">
+                    <a href="#">Quienes somos</a>
+                    <a href="#">tutoriales</a>
+                    <a href="#">atencion</a>
+
+                </div>
+            </div>
+            <div class="row">
+                <h4>sobre nosotros</h4>
+                <div class="link">
+                    <a href="#">Quienes somos</a>
+                    <a href="#">tutoriales</a>
+                    <a href="#">atencion</a>
+
+                </div>
+            </div>
+            <div class="row">
+                <h4>sobre nosotros</h4>
+                <div class="link">
+                    <a href="#">Quienes somos</a>
+                    <a href="#">tutoriales</a>
+                    <a href="#">atencion</a>
+
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="bottom_footer">
+            <div class="container cnt_copy">
+                <p>Copyright &copy; <span>ELECTROTOP</span> derechos reservados</p>
+                <div class="payment_img">
+                    <!-- <img src="/img/slider/visa.png" alt="">
+                    <img src="/img/slider/mastercard.png" alt="">
+                    <img src="/img/slider/dinnersclub.png" alt="">
+                    <img src="/img/slider/amercican-express.png" alt=""> -->
+                    <img src="/img/slider/logos-pasarela.png" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+<script src="/js/main.js"></script>
+<script src="/js/swiper.js"></script>
+<script src="/js/items.js"></script>
+<script src="/js/detalle.js"></script>
+
+</html>

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+    <!-- Link Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Link File CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/wasap.css">
+    <!-- <link rel="stylesheet" href="/css/caroucel-marcas.css"> -->
+    <!-- <link rel="stylesheet" href="/css/slide.css"> -->
+    <!-- <link rel="stylesheet" href="/css/bannerbig.css"> -->
+</head>
+
+<body>
+    <header>
+
+        <div class="container top-nav">
+            <a href="index.html" class="logo"><img src="/img/electro.png" alt=""></a>
+            <form action="" class="search">
+                <input type="search" placeholder="buscar..." name="" id="">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+
+            <div class="cart_header">
+                <div onclick="open_cart()" class="icon_cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="count_item">0</span>
+                </div>
+                <div class="tottal_price">
+                    <p>Mi Carrito:</p>
+                    <p class="price_cart_head">S/0</p>
+                </div>
+            </div>
+        </div>
+
+        <nav>
+            <div class="link container">
+                <i onclick="open_menu()" class="fa-solid fa-bars btn_open_menu"></i>
+                <ul id="menu">
+                    <!-- esto de aqui se activa en el responsive -->
+                    <span onclick="close_menu()" class="bg-overlay"></span>
+                    <i onclick="close_menu()" class="fa-solid fa-rectangle-xmark btn_close_menu"></i>
+                    <!-- <a href=""></a> -->
+                    <img class="logo_menu" src="/img/electro.jpeg" alt="">
+
+                    <li class="active"><a href="/index.html">home</a></li>
+                    <li><a href="/all_products.html" onclick="clearSearchTerm()">catalogo</a></li>
+
+                    <script>
+                        function clearSearchTerm() {
+                            localStorage.removeItem('searchTerm');
+                        }
+                    </script>
+
+                    <li><a href="">nosotros</a></li>
+                    <li><a href="">contactanos</a></li>
+                </ul>
+                <div class="login_signup">
+                    <a href="/login.html">login <i class="fa-solid fa-right-to-bracket"></i></a>
+                    <a href="#">registrar <i class="fa-solid fa-user-plus"></i></a>
+
+                </div>
+            </div>
+        </nav>
+
+
+    </header>
+
+    <div class="cart">
+        <div class="top_cart">
+            <h3>Mi Carrito <span class="count_item_cart">(0item in cart)</span></h3>
+            <span onclick="close_cart()" class="close_cart"><i class="fa-solid fa-xmark"></i></span>
+        </div>
+
+        <div class="items_in_cart">
+
+            <!-- <div class="item_cart">
+                <img src="/img/c_analogicas/01a.png" alt="">
+                <div class="content">
+                    <h4>Lorem ipsum ggggggggggggggggggggg dolor sit</h4>
+                    <p class="price_cart">$140</p>
+                </div>
+                <button class="delete_item"><i class="fa-solid fa-trash"></i></button>
+            </div> -->
+
+        </div>
+
+
+        <div class="bottom_cart">
+            <div class="total">
+                <p>subtotal</p>
+                <p class="price_cart_total">S/0</p>
+            </div>
+
+            <div class="button_cart">
+                <a href="/checkout.html" class="btn_cart">continuar compra</a>
+                <button class="btn_cart trans_bg">seguir comprando</button>
+            </div>
+        </div>
+    </div>
+
+    <section class="slider">
+        <div class="container">
+            <div class="side_bar">
+                <h2><i class="fa-solid fa-bars"></i>category</h2>
+                <a onclick="filterproduct('camaras analogicas')" href="#">Camaras analogicas</a>
+                <a href="#">Camaras ip</a>
+                <a href="#">videoportero intercomunicador</a>
+                <a href="#">DNVR'S</a>
+                <a href="#">Alarmas</a>
+                <a href="#">Cerraduras</a>
+                <a href="#">Control de Asistencia y acceso</a>
+                <a href="#">almacenamiento</a>
+                <a href="#">NVR'S</a>
+                <a href="#">Networking</a>
+                <a href="#">Router</a>
+                <a href="#">otros</a>
+
+            </div>
+
+            <!-- Swiper -->
+            <div class="slide-swp mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#"><img src="/img/slider/ba01.png" alt=""></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#"><img src="/img/slider/baner_b2.png" alt=""></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#"><img src="/img/slider/1.png" alt=""></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#"><img src="/img/slider/2.png" alt=""></a>
+                    </div>
+
+
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="swiper-container marcas-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide marcas-item">
+                        <img src="/img/marcas/EZVIZ.png" alt="">
+                    </div>
+                    <div class="swiper-slide marcas-item">
+                        <img src="/img/marcas/HIKVISION.png" alt="">
+                    </div>
+                    <div class="swiper-slide marcas-item">
+                        <img src="/img/marcas/TP LINK.png" alt="">
+                    </div>
+                    <div class="swiper-slide marcas-item">
+                        <img src="/img/marcas/ZKTECO.png" alt="">
+                    </div>
+                    <div class="swiper-slide marcas-item">
+                        <img src="/img/marcas/WESTERN DIGITAL.png" alt="">
+                    </div>
+                    <div class="swiper-slide marcas-item">
+                        <img src="/img/marcas/HYTERA.png" alt="">
+                    </div>
+                    <div class="swiper-slide marcas-item">
+                        <img src="/img/marcas/NEWLINK.png" alt="">
+                    </div>
+                </div>
+                <!-- Botones de navegación dentro de swiper-container -->
+                <div class="swiper-button-next marcas-button-next"></div>
+                <div class="swiper-button-prev marcas-button-prev"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="banner">
+        <div class="container">
+
+            <div class="banner_img">
+                <div class="glass_hover"></div>
+                <a href="#"></a>
+                <img src="/img/slider/controladores-zkteco-online.jpg" alt="">
+
+            </div>
+            <div class="banner_img">
+                <div class="glass_hover"></div>
+                <a href="#"></a>
+                <img src="/img/slider/almacenamiento-western-digital-online.jpg" alt="">
+
+            </div>
+            <div class="banner_img">
+                <div class="glass_hover"></div>
+                <a href="#"></a>
+                <img src="/img/slider/hikvision---rollo-de-cable-online.jpg" alt="">
+
+            </div>
+        </div>
+    </section>
+
+    <section class="slide slide_sale">
+        <div class="container">
+
+            <div class="sale_sec mySwiper">
+
+                <div class="top_slide">
+                    <h2>Productos <span> en oferta</span></h2>
+                </div>
+                <!-- estas son las terjetas  -->
+                <div id="swiper_items_sale" class="products swiper-wrapper">
+
+                    <!-- aqui esta la tarjeta pero estamos usando javascript -->
+
+                </div>
+                <!-- estos son los botones "las flechas mamabicho" -->
+                <div class="swiper-button-next btn_Swip"></div>
+                <div class="swiper-button-prev btn_Swip"></div>
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <section class="banner banner_big">
+        <div class="container">
+            <div class="banner_img">
+                <div class="glass_hover"></div>
+                <a href="#"></a>
+                <img src="/img/slider/baner_b2.png" alt="">
+
+            </div>
+            <div class="banner_img">
+                <div class="glass_hover"></div>
+                <a href="#"></a>
+                <img src="/img/slider/baner_b2.png" alt="">
+
+            </div>
+        </div>
+    </section>
+
+    <section class="slide slide_product">
+        <div class="container">
+
+
+            <div class="top_slide">
+                <h2>Camaras <span> de seguridad</span></h2>
+            </div>
+
+            <div class="slide_whith_img">
+                <div class="categ_img">
+                    <a href="#"><img src="/img/slider/baner01.jpg" alt=""></a>
+                </div>
+                <!-- utilizaremos class product_swip en swiper.js -->
+                <div class="product_swip mySwiper">
+                    <div class="products other_product_swiper swiper-wrapper " id="other_product_swiper">
+
+                    </div>
+
+                    <div class="swiper-button-next btn_Swip"></div>
+                    <div class="swiper-button-prev btn_Swip"></div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide slide_product">
+        <div class="container">
+
+
+            <div class="top_slide">
+                <h2>Camaras <span> de seguridad</span></h2>
+            </div>
+
+            <div class="slide_whith_img">
+
+
+                <!-- utilizaremos class product_swip en swiper.js -->
+                <div class="product_swip mySwiper">
+                    <div class="products other_product_swiper swiper-wrapper " id="other_product_swiper2">
+
+                    </div>
+
+                    <div class="swiper-button-next btn_Swip"></div>
+                    <div class="swiper-button-prev btn_Swip"></div>
+
+                </div>
+
+                <div class="categ_img">
+                    <a href="#"><img src="/img/slider/baner_b3.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="banner">
+        <div class="container">
+            <div class="banner_img">
+                <div class="glass_hover"></div>
+                <a href="#"></a>
+                <img src="/img/slider/controladores-zkteco-online.jpg" alt="">
+
+            </div>
+            <div class="banner_img">
+                <div class="glass_hover"></div>
+                <a href="#"></a>
+                <img src="/img/slider/almacenamiento-western-digital-online.jpg" alt="">
+
+            </div>
+            <div class="banner_img">
+                <div class="glass_hover"></div>
+                <a href="#"></a>
+                <img src="/img/slider/hikvision---rollo-de-cable-online.jpg" alt="">
+
+            </div>
+        </div>
+    </section>
+
+    <div class="newsletter">
+        <div class="container">
+            <div class="text">
+                <img src="/img/slider/840_560.jpeg" alt="">
+                <div class="content">
+                    <h4>comunicate con nosotros</h4>
+                    <p>envianos un mensaje a nuestro whatsapp</p>
+                    <h6>realizamos envios a otras regiones </h6>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="back_to_top">
+        <p>Electrotop(Inicio)</p>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="big_row">
+                <img src="" alt="">
+                <div class="hotline">
+                    <i class="fa-solid fa-headset"></i>
+                    <div class="text">
+                        <h5>comucate con nosotros:</h5>
+                        <h6>99999999999</h6>
+                    </div>
+                </div>
+                <!-- <i class="fa-solid fa-location-dot"></i> -->
+                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+            </div>
+
+            <div class="row">
+                <h4>sobre nosotros</h4>
+                <div class="link">
+                    <a href="#">Quienes somos</a>
+                    <a href="#">tutoriales</a>
+                    <a href="#">atencion</a>
+
+                </div>
+            </div>
+            <div class="row">
+                <h4>sobre nosotros</h4>
+                <div class="link">
+                    <a href="#">Quienes somos</a>
+                    <a href="#">tutoriales</a>
+                    <a href="#">atencion</a>
+
+                </div>
+            </div>
+            <div class="row">
+                <h4>sobre nosotros</h4>
+                <div class="link">
+                    <a href="#">Quienes somos</a>
+                    <a href="#">tutoriales</a>
+                    <a href="#">atencion</a>
+
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="bottom_footer">
+            <div class="container cnt_copy">
+                <p>Copyright &copy; <span>ELECTROTOP</span> derechos reservados</p>
+                <div class="payment_img">
+                    <!-- <img src="/img/slider/visa.png" alt="">
+                    <img src="/img/slider/mastercard.png" alt="">
+                    <img src="/img/slider/dinnersclub.png" alt="">
+                    <img src="/img/slider/amercican-express.png" alt=""> -->
+                    <img src="/img/slider/logos-pasarela.png" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="whatsapp-button">
+        <a href="https://wa.me/XXXXXXXXXX" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+    <script src="/js/detalle.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+<script src="/js/main.js"></script>
+<script src="/js/swiper.js"></script>
+<!-- <script src="/js/caroucel-marcas.js"></script> -->
+<script src="/js/items.js"></script>
+<script src="/js/slidermarcas.js"></script>
+<script src="/js/all_products.js"></script>
+<script src="/js/buscador.js"></script>
+
+
+</html>
